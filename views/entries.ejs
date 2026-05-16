@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Entries</title>
+
+<style>
+
+body {
+    background: skyblue;
+    font-family: Arial;
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+a {
+    background: blue;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Saved Entries</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Phone Number</th>
+</tr>
+
+<% entries.forEach(entry => { %>
+
+<tr>
+<td><%= entry.id %></td>
+<td><%= entry.phone %></td>
+</tr>
+
+<% }) %>
+
+</table>
+
+<a href="/">Back</a>
+
+</div>
+
+</body>
+</html>
